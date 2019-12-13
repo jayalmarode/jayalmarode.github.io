@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type">
+  <title>FHJ</title>
+<style type="text/css">
+
+/* All Styles Optional */
+
+* {
+font-family:arial;
+font-size:10pt;
+}
+div#show3 {
+background-color:#efefef;
+width:140px;
+margin:0 auto;
+border:1px solid #444444;
+}
+div#show3 table td, div#show4 table td {
+height:24px;
+background-image:url('38.gif');
+}
+div#show4 table td {
+background-image:url('40.gif');
+}
+div#show3 table input,  div#show4 table input {
+outline-style:none;
+}
+</style>
+
+<!--[if IE]>
+<style type="text/css">
+div#show3 table td, div#show4 table td {
+height:21px;
+}
+</style>
+<![endif]-->
+
+<script type="text/javascript">
+
+//If using image buttons as controls, Set image buttons' image preload here true
+//(use false for no preloading and for when using no image buttons as controls):
+var preload_ctrl_images=false;
+
+var slides=[];
+//configure the below images and descriptions to your own. 
+slides[0] = ["backgroundImages/00.bg.JPG", ""];
+slides[1] = ["backgroundImages/01.bg.JPG", ""];
+
+//above slide show uses only the defaults
+
+slides.random=1
+slides.no_controls=1
+
+//Notes:
+//slides#.target will set a target for a slide group, will be overridden by slides#[#][3], if present
+//slides#.specs will set new window specifications for a slide group, will be overridden by slides#[#][4], if present
+//slides#.fadecolor will set fading images background color, defaults to white
+//slides#.no_controls will set a slide show with no controls
+//slides#.random will set a random slide sequence on each page load
+//slides#.delay=3000 will set miliseconds delay between slides for a given show, may also be set in the call as the last parameter
+//slides#.jumpto=1 will display added controls to jump to a particular image by its number
+//slides#.no_added_linebreaks=1; use for no added line breaks in formatting of texts and controls
+
+//use below to create a customized onclick event for linked images in a given show:
+//slides#.onclick="window.open(this.href,this.target,'top=0, left=0, width='+screen.availWidth+', height='+screen.availHeight);return false;"
+
+</script>
+
+<script src="swissarmy.js" type="text/javascript">
+
+/***********************************************
+* Swiss Army Image slide show script  - © John Davenport Scheuer: http://home.comcast.net/~jscheuer1/
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full original source code
+***********************************************/
+
+</script>
+</head>
+
+
+<body >
+<p>
+</p>
+
+<table id="bgChange" style="text-align: left; width: 1000px; height: 750px;"
+ border="0" cellpadding="5"
+ cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+<big
+ style="font-weight: bold; font-family: Arial; font-style: italic; color: rgb(51, 102, 255);">
+<a
+ href="./SkiWeb/latest.html" style="text-decoration: none; color: black;">FHJ
+</a>
+</big>
+<script type="text/javascript">
+//Notes on Parameters: The only required parameter is the slides_array_name.  If Width is used, so must Height.
+//Interval is optional too.  It is always last, either fourth after Width and Height or second after Slides_array_name.
+//Usage: new inter_slide(Slides_array_name, Width, Height, Interval)
+new inter_slide(slides, 20000)
+</script>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
