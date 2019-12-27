@@ -1,5 +1,5 @@
 #outerPanel {
-	width: 925px;
+	width: 1240px;
 	padding-top: 0.7em;
 	padding-bottom: 0.7em;
 	padding-left: 0.7em;
@@ -247,45 +247,13 @@ img {
         padding-bottom: 5px;
         padding-top: 3px;
 }
-.jay-animate-fading {
-    /* animation: fading 10s infinite; */
-        animation-name: fading;
-        animation-duration: 4s;
-        animation-timing-function: ease;
-        animation-delay: 0s;
-        animation-iteration-count: infinite;
-        animation-direction: normal;
-        animation-fill-mode: none;
-        animation-play-state: running;
+#button {     
+/*    background-color: Transparent; */
+    color: yellow;
+    background-color: yellow;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;        
 }
-#outerImageContainer {
-    background-color: #333;
-    width: 450px;
-    height: 300px;
-} 
-#imageContainer {
-    background-color: #333;
-    width: 900px;
-    height: 675px;
-    overflow: hidden;
-} 
-#imageContainer img {
-  animation: kenburns 40s infinite;
-}
-@keyframes kenburns {
-    0% {
-      opacity: 0;
-    }
-    5% {
-      opacity: 1;
-    }
-    95% {
-        transform: scale3d(1.25, 1.25, 1.25) translate3d(-50px, -50px, 0px);
-        animation-timing-function: ease-in;
-        opacity: 1;
-    }
-    100% {
-        transform: scale3d(1.7, 1.7, 1.7) translate3d(-120px, -100px, 0px);
-        opacity: 0;
-    }
-}
+
