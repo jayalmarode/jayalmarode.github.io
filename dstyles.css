@@ -290,7 +290,7 @@ img {
         opacity: 1;
     }
     100% {
-        transform: scale3d(1.7, 1.7, 1.7) translate3d(-120px, -100px, 0px);
+        transform: scale3d(1.25, 1.25, 1.25) translate3d(-50px, -50px, 0px);
         opacity: 0;
     }
 }
