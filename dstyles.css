@@ -104,30 +104,6 @@
 	text-align: right;
 }
 
-#middleRow {
-	border-radius:10px;
-	padding: 0.1em;
-	border-style:solid;
-	border-color:#a3a19f;
-	display: inline-block;
-}
-#monthCell {
-	border-radius:10px;
-	padding: 0.1em;
-	border-style:solid;
-	border-color:#a3a19f;
-	display: inline-block;
-}
-
-#middleRow2 {
-	border-radius:15px;
-	padding: 0.7em;
-	background-color: #ffffff;
-	border-style:solid;
-	border-color:#ffffff;
-	display: inline-block;
-}
-
 
 #headerDiv, #contentDiv {
 float: left;
@@ -140,15 +116,6 @@ margin: 0px 20px 0px 0px;
 }
 
 #headerDiv a:hover {
-color: #FFFFFF;
-}
-
-.myTreksNoPics {
-font-size: small;
-font-weight: normal;
-}
-
-.myTreks:hover {
 color: #FFFFFF;
 }
 
@@ -174,7 +141,8 @@ margin: 5px 10px;
 }
 
 .captionDiv {
-	border-radius:7px;
+    border-radius:7px;
+    opacity: .7;
 }
 
 /* unvisited link */
@@ -201,65 +169,15 @@ img {
     vertical-align: bottom;
 }
 
-.fhjTable
-{
-	display: table;
-	border-radius:8px;
-	background-color: #FFFFFF;
-}
-.fhjTableTitle
-{
-        display: table-caption;
-        text-align: center;
-        font-weight: bold;
-        font-size: larger;
-}
-.fhjTableHeading
-{
-        display: table-row;
-        font-weight: bold;
-        text-align: center;
-}
-.fhjTableRow
-{
-        display: table-row;
-}
-.fhjTableRow2
-{
-        display: table-row;
-}
-.fhjTableCellL
-{
-/*	width: 40px; */
-        text-align: left;
-        display: table-cell;
-        padding-left: 8px;
-        padding-right: 8px;
-        padding-bottom: 5px;
-        padding-top: 3px;
-	border-style:solid;
-	border-color:#a3a19f;
-}
-.fhjTableCell
-{
-/*	width: 40px; */
-        text-align: right;
-        display: table-cell;
-        border-width: thin;
-        padding-left: 8px;
-        padding-right: 8px;
-        padding-bottom: 5px;
-        padding-top: 3px;
-}
 .jay-animate-fading {
-    /* animation: fading 10s infinite; */
+        animation: fading 60s infinite;
         animation-name: fading;
-        animation-duration: 4s;
+        animation-duration: 60s;
         animation-timing-function: ease;
         animation-delay: 0s;
         animation-iteration-count: infinite;
         animation-direction: normal;
-        animation-fill-mode: none;
+        animation-fill-mode: backwards;
         animation-play-state: running;
 }
 #outerImageContainer {
@@ -275,58 +193,16 @@ img {
     border-radius:8px;
 } 
 #imageContainer img {
-  animation: kenburns 40s infinite;
+  animation: kenburns 120s infinite;
 }
 @keyframes kenburns {
-    0% {
-      opacity: 0;
-    }
-    5% {
-      opacity: 1;
-    }
-    95% {
-        transform: scale3d(1.25, 1.25, 1.25) translate3d(-50px, -50px, 0px);
-        animation-timing-function: ease-in;
-        opacity: 1;
-    }
-    100% {
-        transform: scale3d(1.25, 1.25, 1.25) translate3d(-50px, -50px, 0px);
-        opacity: 0;
-    }
-}
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: lightGray;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -20px;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -3px;
-  border-width: 3px;
-  border-style: solid;
-  border-color: lightGray transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
+  0%   { opacity: 0; }
+  2%   { opacity: 1; }
+  98%  { opacity: 1;
+      transform: scale3d(1.5, 1.5, 1.5) translate3d(-75px, -75px, 0px);
+  }
+  100% { opacity: 0;
+      transform: scale3d(1.5, 1.5, 1.5) translate3d(-75px, -75px, 0px);
+  }
 }
 

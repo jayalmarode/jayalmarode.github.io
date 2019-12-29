@@ -17,9 +17,9 @@
 <div class="w3-content w3-display-container">
 
 <div class="outerImageContainer">
-<div class="w3-display-container trekSlides" id="imageContainer">
-  <img src="" style="width:100%" class="jay-animate-fading trekPic" id="jTrekImg">
-  <div class="w3-display-bottomleft w3-small w3-container w3-padding-small w3-light-gray w3-text-blue tooltip captionDiv" id="jTrekDiv">
+<div class="w3-display-container" id="imageContainer">
+  <img src="" style="width:100%" class="trekPic" id="jTrekImg">
+  <div class="w3-display-bottomleft w3-small w3-container w3-padding-small w3-light-gray w3-text-blue captionDiv" id="jTrekDiv">
   </div>
 </div>
 </div>
@@ -38,254 +38,317 @@
 var picLinks = [];
 var picDates = [];
 var picLocations = [];
+var picDescriptions = [];
  
 picLinks[0] = "./backgroundImages/2003.overhang1.jpg";
 picDates[0] = "May 15, 2003";
 picLocations[0] = "Mt. Ashland circumnavigate";
+picDescriptions[0] = "Started late at 3:30, it was partly cloudy with some sunbreaks.";
  
 picLinks[1] = "./backgroundImages/2005.d12.jpg";
 picDates[1] = "January 23, 2005";
 picLocations[1] = "Crater Lake, Dutton Cliff";
+picDescriptions[1] = "Dutton Peak climb and descent.";
  
 picLinks[2] = "./backgroundImages/2005.p2.1.jpg";
 picDates[2] = "March 13, 2005";
 picLocations[2] = "Mt. Ashland backside";
+picDescriptions[2] = "New peaks south of snow cave ridge .";
  
 picLinks[3] = "./backgroundImages/2005.01.apr26.jpg";
 picDates[3] = "April 26, 2005";
 picLocations[3] = "Mt. Ashland downhill";
+picDescriptions[3] = "Working out the frustrations .";
  
 picLinks[4] = "./backgroundImages/2005.11.apr30.jpg";
 picDates[4] = "April 30, 2005";
 picLocations[4] = "Mt. Hood, Cooper Spur";
+picDescriptions[4] = "Cooper Spur turns .";
  
 picLinks[5] = "./backgroundImages/2005.13.may25.jpg";
 picDates[5] = "May 25, 2005";
 picLocations[5] = "Mt. Ashland downhill";
+picDescriptions[5] = "Circling the bowl after work .";
  
 picLinks[6] = "./backgroundImages/2005.00.june4.jpg";
 picDates[6] = "June 4, 2005";
 picLocations[6] = "Mt. Ashland downhill";
+picDescriptions[6] = "Morning turns on the mtn .";
  
 picLinks[7] = "./backgroundImages/2006.19.jan28.JPG";
 picDates[7] = "January 28, 2006";
 picLocations[7] = "Mt. Ashland backside";
+picDescriptions[7] = "Deep and steep epic powder day.";
  
 picLinks[8] = "./backgroundImages/2006.11.feb12day.jpg";
 picDates[8] = "February 12, 2006";
 picLocations[8] = "Three Fingered Jack";
+picDescriptions[8] = "Sweet turns and snow shelters.";
  
 picLinks[9] = "./backgroundImages/2006.15.feb18.JPG";
 picDates[9] = "February 18, 2006";
 picLocations[9] = "Mt. Ashland backside";
+picDescriptions[9] = "A new slope and goal reached.";
  
 picLinks[10] = "./backgroundImages/2006.11.apr20.JPG";
 picDates[10] = "April 20, 2006";
 picLocations[10] = "Mt. Ashland backside";
+picDescriptions[10] = "Return to Eden .";
  
 picLinks[11] = "./backgroundImages/2006.07.apr23.JPG";
 picDates[11] = "April 23, 2006";
 picLocations[11] = "McDonald Peak";
+picDescriptions[11] = "Mission  McDonald .";
  
 picLinks[12] = "./backgroundImages/2006.00.may4.JPG";
 picDates[12] = "May 4, 2006";
 picLocations[12] = "Mt. Ashland backside";
+picDescriptions[12] = "Thursday afternoon corn harvest .";
  
 picLinks[13] = "./backgroundImages/2006.07.may27.JPG";
 picDates[13] = "May 27, 2006";
 picLocations[13] = "Mt. Ashland downhill";
+picDescriptions[13] = "Fresh snow in late May .";
  
 picLinks[14] = "./backgroundImages/2007.00.dec2.jpg";
 picDates[14] = "December 2, 2007";
 picLocations[14] = "Crazy Hills near Mt Adams, WA";
+picDescriptions[14] = "First Crazy trek of the season.";
  
 picLinks[15] = "./backgroundImages/2007.11.dec2.jpg";
 picDates[15] = "December 2, 2007";
 picLocations[15] = "Crazy Hills near Mt Adams, WA";
+picDescriptions[15] = "First Crazy trek of the season.";
  
 picLinks[16] = "./backgroundImages/2007.12.dec2.jpg";
 picDates[16] = "December 2, 2007";
 picLocations[16] = "Crazy Hills near Mt Adams, WA";
+picDescriptions[16] = "First Crazy trek of the season.";
  
 picLinks[17] = "./backgroundImages/2007.18.dec2.jpg";
 picDates[17] = "December 2, 2007";
 picLocations[17] = "Crazy Hills near Mt Adams, WA";
+picDescriptions[17] = "First Crazy trek of the season.";
  
 picLinks[18] = "./backgroundImages/2007.28.dec2.jpg";
 picDates[18] = "December 2, 2007";
 picLocations[18] = "Crazy Hills near Mt Adams, WA";
+picDescriptions[18] = "First Crazy trek of the season.";
  
 picLinks[19] = "./backgroundImages/2007.32.dec2.jpg";
 picDates[19] = "December 2, 2007";
 picLocations[19] = "Crazy Hills near Mt Adams, WA";
+picDescriptions[19] = "First Crazy trek of the season.";
  
 picLinks[20] = "./backgroundImages/2007.07.apr15.JPG";
 picDates[20] = "April 15, 2007";
 picLocations[20] = "Mt. Ashland backside";
+picDescriptions[20] = "The Cathedral delivers.";
  
 picLinks[21] = "./backgroundImages/2007.15.apr15.JPG";
 picDates[21] = "April 15, 2007";
 picLocations[21] = "Mt. Ashland backside";
+picDescriptions[21] = "The Cathedral delivers.";
  
 picLinks[22] = "./backgroundImages/2008.07.dec9.JPG";
 picDates[22] = "December 9, 2008";
 picLocations[22] = "Mt. Ashland backside";
+picDescriptions[22] = "J Tree beginning.";
  
 picLinks[23] = "./backgroundImages/2008.43.dec21.JPG";
 picDates[23] = "December 21, 2008";
 picLocations[23] = "Mt. Ashland backside";
+picDescriptions[23] = "Earning those powder turns.";
  
 picLinks[24] = "./backgroundImages/2008.44.dec21.JPG";
 picDates[24] = "December 21, 2008";
 picLocations[24] = "Mt. Ashland backside";
+picDescriptions[24] = "Earning those powder turns.";
  
 picLinks[25] = "./backgroundImages/2008.13.dec30.JPG";
 picDates[25] = "December 30, 2008";
 picLocations[25] = "Mt. Ashland backside";
+picDescriptions[25] = "Highway to powder.";
  
 picLinks[26] = "./backgroundImages/2008.01.jan19.ben.jpg";
 picDates[26] = "January 19, 2008";
 picLocations[26] = "Broken Top";
+picDescriptions[26] = "Of mice and moraine.";
  
 picLinks[27] = "./backgroundImages/2008.20.mar16.JPG";
 picDates[27] = "March 16, 2008";
 picLocations[27] = "Mt. Ashland backside";
+picDescriptions[27] = "Wild day at snow cave ridge.";
  
 picLinks[28] = "./backgroundImages/2008.34b.apr5.JPG";
 picDates[28] = "April 5, 2008";
 picLocations[28] = "Wagner Butte";
+picDescriptions[28] = "The Wagner boot.";
  
 picLinks[29] = "./backgroundImages/2008.34.apr12.JPG";
 picDates[29] = "April 12, 2008";
 picLocations[29] = "Siskiyou Peak";
+picDescriptions[29] = "Three Peaks.";
  
 picLinks[30] = "./backgroundImages/2008.00.apr15.JPG";
 picDates[30] = "April 15, 2008";
 picLocations[30] = "Mt. Ashland backside";
+picDescriptions[30] = "Excellent XCD turns.";
  
 picLinks[31] = "./backgroundImages/2009.09.jan9.JPG";
 picDates[31] = "January 9, 2009";
 picLocations[31] = "Broken Top";
+picDescriptions[31] = "Climbing, construction, cuisine.";
  
 picLinks[32] = "./backgroundImages/2009.11.jan9.JPG";
 picDates[32] = "January 9, 2009";
 picLocations[32] = "Broken Top";
+picDescriptions[32] = "Climbing, construction, cuisine.";
  
 picLinks[33] = "./backgroundImages/2009.01.jan10.JPG";
 picDates[33] = "January 10, 2009";
 picLocations[33] = "Broken Top";
+picDescriptions[33] = "Rebuilding the kitchen and a night hike.";
  
 picLinks[34] = "./backgroundImages/2009.11.jan10.JPG";
 picDates[34] = "January 10, 2009";
 picLocations[34] = "Broken Top";
+picDescriptions[34] = "Rebuilding the kitchen and a night hike.";
  
 picLinks[35] = "./backgroundImages/2009.32.jan11.JPG";
 picDates[35] = "January 11, 2009";
 picLocations[35] = "Broken Top";
+picDescriptions[35] = "Day vistas.";
  
 picLinks[36] = "./backgroundImages/2009.00.feb27.JPG";
 picDates[36] = "February 27, 2009";
 picLocations[36] = "McDonald Peak";
+picDescriptions[36] = "Classic McDonald.";
  
 picLinks[37] = "./backgroundImages/2009.02.feb27.JPG";
 picDates[37] = "February 27, 2009";
 picLocations[37] = "McDonald Peak";
+picDescriptions[37] = "Classic McDonald.";
  
 picLinks[38] = "./backgroundImages/2009.28.may8.JPG";
 picDates[38] = "May 8, 2009";
 picLocations[38] = "Mt. Ashland downhill";
+picDescriptions[38] = "Friday afternoon runs.";
  
 picLinks[39] = "./backgroundImages/2009.15.may17.JPG";
 picDates[39] = "May 17, 2009";
 picLocations[39] = "Mt. Hood, Bennett Pass";
+picDescriptions[39] = "";
  
 picLinks[40] = "./backgroundImages/2010.18.apr10.JPG";
 picDates[40] = "April 10, 2010";
 picLocations[40] = "Iron Mountain";
+picDescriptions[40] = "Iron Mountain Solo.";
  
 picLinks[41] = "./backgroundImages/2012.06.jan23.JPG";
 picDates[41] = "January 23, 2012";
 picLocations[41] = "Tombstone Pass";
+picDescriptions[41] = "Touring at Tombstone.";
  
 picLinks[42] = "./backgroundImages/2012.03.may6.JPG";
 picDates[42] = "May 6, 2012";
 picLocations[42] = "Three Fingered Jack";
+picDescriptions[42] = "Return to Three Fingered Jack.";
  
 picLinks[43] = "./backgroundImages/2012.74.may6.JPG";
 picDates[43] = "May 6, 2012";
 picLocations[43] = "Three Fingered Jack";
+picDescriptions[43] = "Return to Three Fingered Jack.";
  
 picLinks[44] = "./backgroundImages/2014.64.jan14.JPG";
 picDates[44] = "January 14, 2014";
 picLocations[44] = "Iron Mountain";
+picDescriptions[44] = "Sophie and I start the season.";
  
 picLinks[45] = "./backgroundImages/2014.14.mar11.JPG";
 picDates[45] = "March 11, 2014";
 picLocations[45] = "Three Fingered Jack";
+picDescriptions[45] = "Blue bird day at 3FJ.";
  
 picLinks[46] = "./backgroundImages/2014.10.apr2.JPG";
 picDates[46] = "April 2, 2014";
 picLocations[46] = "HooDoo";
+picDescriptions[46] = "Turns at HooDoo.";
  
 picLinks[47] = "./backgroundImages/2016.10.jan25.JPG";
 picDates[47] = "January 25, 2016";
 picLocations[47] = "Berley Lakes";
+picDescriptions[47] = "Spectacular Berley.";
  
 picLinks[48] = "./backgroundImages/2016.18.feb7.JPG";
 picDates[48] = "February 7, 2016";
 picLocations[48] = "Three Fingered Jack";
+picDescriptions[48] = "Super Sunday on the Mountain.";
  
 picLinks[49] = "./backgroundImages/2016.24.mar30.JPG";
 picDates[49] = "March 30, 2016";
 picLocations[49] = "Iron Mountain";
+picDescriptions[49] = "Lunch at Iron Mountain Spire.";
  
 picLinks[50] = "./backgroundImages/2016.57.apr1.JPG";
 picDates[50] = "April 1, 2016";
 picLocations[50] = "Berley Lakes";
+picDescriptions[50] = "New Berley Peak.";
  
 picLinks[51] = "./backgroundImages/2017.034.dec18.JPG";
 picDates[51] = "December 18, 2017";
 picLocations[51] = "Iron Mountain";
+picDescriptions[51] = "Gorgeous Day in the Winter Wonderland.";
  
 picLinks[52] = "./backgroundImages/2017.016.mar19.JPG";
 picDates[52] = "March 19, 2017";
 picLocations[52] = "Iron Mountain";
+picDescriptions[52] = "Back to the Peak.";
  
 picLinks[53] = "./backgroundImages/2017.004.mar23.JPG";
 picDates[53] = "March 23, 2017";
 picLocations[53] = "Iron Mountain";
+picDescriptions[53] = "Another quickie.";
  
 picLinks[54] = "./backgroundImages/2017.018.apr15.JPG";
 picDates[54] = "April 15, 2017";
 picLocations[54] = "Craig Lake";
+picDescriptions[54] = "Past Craig.";
  
 picLinks[55] = "./backgroundImages/2017.001.apr28.JPG";
 picDates[55] = "April 28, 2017";
 picLocations[55] = "Craig Lake";
+picDescriptions[55] = "Exploring around Craig Lake.";
  
 picLinks[56] = "./backgroundImages/2017.030.may9.JPG";
 picDates[56] = "May 9, 2017";
 picLocations[56] = "Berley Lakes";
+picDescriptions[56] = "Perseverance.";
  
 picLinks[57] = "./backgroundImages/2017.023.may25.JPG";
 picDates[57] = "May 25, 2017";
 picLocations[57] = "Dutchman Flat";
+picDescriptions[57] = "Dutchman Day.";
  
 picLinks[58] = "./backgroundImages/2019.034.jan7.JPG";
 picDates[58] = "January 7, 2019";
 picLocations[58] = "Iron Mountain";
+picDescriptions[58] = "";
  
 picLinks[59] = "./backgroundImages/2019.018.feb21.canon.JPG";
 picDates[59] = "February 21, 2019";
 picLocations[59] = "Iron Mountain";
+picDescriptions[59] = "";
  
 picLinks[60] = "./backgroundImages/2019.035.mar10.JPG";
 picDates[60] = "March 10, 2019";
 picLocations[60] = "Iron Mountain";
+picDescriptions[60] = "";
  
 picLinks[61] = "./backgroundImages/2019.020.mar30.JPG";
 picDates[61] = "March 30, 2019";
 picLocations[61] = "Iron Mountain";
+picDescriptions[61] = "";
  function getNextSlideIndex(num) {
   var save = slideIndex;
   slideIndex = Math.round(Math.random() * num);
@@ -301,9 +364,9 @@ function showSlides() {
   var captionDiv = document.getElementById("jTrekDiv");
   getNextSlideIndex(picLinks.length);
   img.src = picLinks[slideIndex];
-  captionDiv.textContent = picDates[slideIndex];
-  captionDiv.title = picLocations[slideIndex];
-  setTimeout(showSlides, 20000); // Change image every x seconds
+  captionDiv.textContent = picDates[slideIndex] + ', ' + picLocations[slideIndex];
+  captionDiv.title = picDescriptions[slideIndex];
+  setTimeout(showSlides, 120000); // Change image every x seconds
 }
 
 var slideIndex = 0;
