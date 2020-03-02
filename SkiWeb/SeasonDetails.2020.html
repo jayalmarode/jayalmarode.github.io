@@ -3,22 +3,19 @@
 <HEAD>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./dstyles.css" type="text/css"/>
+<link rel="stylesheet" href="../fhjstyles.css" type="text/css"/>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-.trekSlides {display:none;}
-</style>
 </HEAD>
 
 
 <body bgcolor="#ffffff" dir="ltr" lang="en-US" link="#000099" text="#000000" vlink="#990099">
 <title>FHJ 2020</title>
 
-<div id="outerPanel">
+<div class="outerPanel">
+
 
 <div class="oneFourthPanel">
 
-<div class="seasonTreksContainer">
 <div class="seasonTrekAlign" >
 <span class="descriptionTextXLarge">
 &nbsp;
@@ -33,7 +30,6 @@
 </div>
 
 </div> <!-- seasonTrekAlign --!>
-</div> <!-- seasonTreksContainer --!>
 <br>
 <br>
 <br>
@@ -60,30 +56,35 @@ with Lindsey
 2/18/2020,&nbsp;Iron Mountain
 </div>
 
+
+<div class="myTreks" onclick="showTrekDiv(trekIndex = 4)" style="cursor: url('./nextTrek.png') 16 16, auto" title="" >
+3/1/2020,&nbsp;Iron Mountain
+</div>
+
  
 
 </div> <!-- treksListPanel --!>
 </div> <!-- oneFourthPanel --!>
 
 <div class="threeFourthsPanel">
+
 <div class="w3-content w3-display-container">
 
-<div class="outerImageContainer">
-<div class="w3-display-container" id="imageContainer">
-  <img src="" style="width:100%" class="trekPic" id="jTrekImg">
-  <div class="w3-display-bottomleft w3-small w3-container w3-padding-small w3-light-gray w3-text-blue captionDiv" id="jTrekDiv">
+<div class="w3-display-container imageContainer" id="fhjPicOuter" >
+  <img src="" style="width:100%" class="trekPic" id="fhjPicImg">
+  <div class="w3-display-bottomleft w3-small w3-container w3-padding-small w3-light-gray w3-text-blue captionDiv" id="fhjPicCaption">
   </div>
-</div>
-</div>
 
-<button class="slideButton w3-button w3-display-left w3-pale-blue w3-padding-small jayslidebutton" onclick="nextSlideDiv(-1)">&#10094;</button>
-<button class="slideButton w3-button w3-display-right w3-pale-blue w3-padding-small jayslidebutton" onclick="nextSlideDiv(1)">&#10095;</button>
+<button class="w3-button w3-display-left w3-pale-blue w3-padding-small buttonDiv" onclick="nextSlideDiv(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-pale-blue w3-padding-small buttonDiv" onclick="nextSlideDiv(1)">&#10095;</button>
 
 <div class="w3-display-bottomright w3-medium w3-container w3-padding-small">
   <a href=../index.html style="text-decoration: none" name="FHJ"  title="FHJ" >
     <img src="../fhj.PNG" alt="FHJ" title="Go to slideshow of best pictures" />
   </a>
 </div>
+</div>
+
 
 </div> <!-- w3 --!>
 
@@ -91,166 +92,416 @@ with Lindsey
 </div> <!-- outerPanel --!>
 
 <script>
+function constructTrekUrl(year, index) {
+  return "./SeasonDetails." + year + ".html?trekIndex=" + index;
+}
 var picLinks = [];
 var picCaptions = [];
+//var picWidths = [];
+//var picHeights = [];
+
+
+
 
 picLinks[0] = [];
 picCaptions[0] = [];
+//picWidths[0] = [];
+//picHeights[0] = [];
+
 picLinks[0][0] = "../SkiWeb/2020/jan19//001.jan19.JPG";
-picCaptions[0][0] = "";
+picCaptions[0][0] = "Lindsey is very happy to be skiing with her Dad on a beautiful sunny day.";
+//picWidths[0][0] = 900;
+//picHeights[0][0] = 675;
 picLinks[0][1] = "../SkiWeb/2020/jan19//005.jan19.JPG";
 picCaptions[0][1] = "We followed existing tracks part of the way, with over a foot of snow.";
+//picWidths[0][1] = 900;
+//picHeights[0][1] = 675;
 picLinks[0][2] = "../SkiWeb/2020/jan19//009.jan19.JPG";
 picCaptions[0][2] = "I am thrilled to show Lindsey this view spot she had not seen before.";
+//picWidths[0][2] = 900;
+//picHeights[0][2] = 675;
 picLinks[0][3] = "../SkiWeb/2020/jan19//014.jan19.JPG";
 picCaptions[0][3] = "A great angle to view Iron Mountain and Tombstone Peak.";
+//picWidths[0][3] = 900;
+//picHeights[0][3] = 675;
 picLinks[0][4] = "../SkiWeb/2020/jan19//016.jan19.JPG";
 picCaptions[0][4] = "Happy Lindsey.";
+//picWidths[0][4] = 900;
+//picHeights[0][4] = 675;
 picLinks[0][5] = "../SkiWeb/2020/jan19//012.jan19.JPG";
 picCaptions[0][5] = "A nice frame for mountain.";
+//picWidths[0][5] = 900;
+//picHeights[0][5] = 675;
 picLinks[0][6] = "../SkiWeb/2020/jan19//020.jan19.lj.JPG";
 picCaptions[0][6] = "We are enjoying great scenery and snow conditions today.";
+//picWidths[0][6] = 900;
+//picHeights[0][6] = 675;
 picLinks[0][7] = "../SkiWeb/2020/jan19//021.jan19.JPG";
 picCaptions[0][7] = "We enjoyed a glorious view of the Sisters while we ate our snacks.";
+//picWidths[0][7] = 900;
+//picHeights[0][7] = 675;
 picLinks[0][8] = "../SkiWeb/2020/jan19//018.jan19.lj.JPG";
 picCaptions[0][8] = "Another great backdrop for a father and daughter picture.";
+//picWidths[0][8] = 900;
+//picHeights[0][8] = 675;
 picLinks[0][9] = "../SkiWeb/2020/jan19//052.jan19.JPG";
 picCaptions[0][9] = "Lindsey is in great shape and handled the skis well.";
+//picWidths[0][9] = 900;
+//picHeights[0][9] = 675;
 picLinks[0][10] = "../SkiWeb/2020/jan19//038.jan19.lj.JPG";
 picCaptions[0][10] = "A fantastic first ski of the season.";
+//picWidths[0][10] = 900;
+//picHeights[0][10] = 675;
+
+
+
+
 picLinks[1] = [];
 picCaptions[1] = [];
+//picWidths[1] = [];
+//picHeights[1] = [];
+
 picLinks[1][0] = "../SkiWeb/2020/feb4//001.feb4.JPG";
 picCaptions[1][0] = "I found good gliding conditions on this cold, windless morning.";
+//picWidths[1][0] = 900;
+//picHeights[1][0] = 675;
 picLinks[1][1] = "../SkiWeb/2020/feb4//014.feb4.JPG";
 picCaptions[1][1] = "I reached the view spot in great time.";
+//picWidths[1][1] = 900;
+//picHeights[1][1] = 675;
 picLinks[1][2] = "../SkiWeb/2020/feb4//016.feb4.JPG";
 picCaptions[1][2] = "The clouds stayed high for the most part, making for dramatic views.";
+//picWidths[1][2] = 900;
+//picHeights[1][2] = 675;
 picLinks[1][3] = "../SkiWeb/2020/feb4//018.feb4.JPG";
 picCaptions[1][3] = "Mt Jefferson.";
+//picWidths[1][3] = 900;
+//picHeights[1][3] = 675;
 picLinks[1][4] = "../SkiWeb/2020/feb4//027.feb4.JPG";
 picCaptions[1][4] = "I was happy that 3 Fingered Jack was visible.";
+//picWidths[1][4] = 900;
+//picHeights[1][4] = 675;
 picLinks[1][5] = "../SkiWeb/2020/feb4//029.feb4.JPG";
 picCaptions[1][5] = "";
+//picWidths[1][5] = 900;
+//picHeights[1][5] = 675;
 picLinks[1][6] = "../SkiWeb/2020/feb4//040.feb4.JPG";
 picCaptions[1][6] = "";
+//picWidths[1][6] = 900;
+//picHeights[1][6] = 675;
 picLinks[1][7] = "../SkiWeb/2020/feb4//035.feb4.JPG";
 picCaptions[1][7] = "Cold temps and snow in the trees, glorious.";
+//picWidths[1][7] = 900;
+//picHeights[1][7] = 675;
 picLinks[1][8] = "../SkiWeb/2020/feb4//013.feb4.JPG";
 picCaptions[1][8] = "This slope got steeper at the end to make it more interesting.";
+//picWidths[1][8] = 900;
+//picHeights[1][8] = 675;
 picLinks[1][9] = "../SkiWeb/2020/feb4//055.feb4.JPG";
 picCaptions[1][9] = "I found this new spot with a glimpse of Mt. Jeff.";
+//picWidths[1][9] = 900;
+//picHeights[1][9] = 675;
 picLinks[1][10] = "../SkiWeb/2020/feb4//057.feb4.JPG";
 picCaptions[1][10] = "";
+//picWidths[1][10] = 900;
+//picHeights[1][10] = 675;
 picLinks[1][11] = "../SkiWeb/2020/feb4//021.feb4.JPG";
 picCaptions[1][11] = "A great way to spend the last day in my fifties.";
+//picWidths[1][11] = 900;
+//picHeights[1][11] = 675;
 picLinks[1][12] = "../SkiWeb/2020/feb4//060.feb4.JPG";
 picCaptions[1][12] = "Cone Peak.";
+//picWidths[1][12] = 900;
+//picHeights[1][12] = 675;
 picLinks[1][13] = "../SkiWeb/2020/feb4//052.feb4.JPG";
 picCaptions[1][13] = "Iron Mountain.";
+//picWidths[1][13] = 900;
+//picHeights[1][13] = 675;
 picLinks[1][14] = "../SkiWeb/2020/feb4//053.feb4.JPG";
 picCaptions[1][14] = "";
+//picWidths[1][14] = 900;
+//picHeights[1][14] = 675;
+
+
+
+
 picLinks[2] = [];
 picCaptions[2] = [];
+//picWidths[2] = [];
+//picHeights[2] = [];
+
 picLinks[2][0] = "../SkiWeb/2020/feb9//002.feb9.JPG";
 picCaptions[2][0] = "I decided to take the shortcut to the peak, climbing in a winter wonderland.";
+//picWidths[2][0] = 900;
+//picHeights[2][0] = 675;
 picLinks[2][1] = "../SkiWeb/2020/feb9//004.feb9.JPG";
 picCaptions[2][1] = "Route finding was fun and challenging at times on this gorgeous morning.";
+//picWidths[2][1] = 900;
+//picHeights[2][1] = 675;
 picLinks[2][2] = "../SkiWeb/2020/feb9//006.feb9.JPG";
 picCaptions[2][2] = "In no time, I was at the open slope below the road to the peak.";
+//picWidths[2][2] = 900;
+//picHeights[2][2] = 675;
 picLinks[2][3] = "../SkiWeb/2020/feb9//008.feb9.JPG";
 picCaptions[2][3] = "Still a lot of climbing to do, but I feel good.";
+//picWidths[2][3] = 900;
+//picHeights[2][3] = 675;
 picLinks[2][4] = "../SkiWeb/2020/feb9//009.feb9.JPG";
 picCaptions[2][4] = "I know this is going to be a great day.  I am going to a birthday celebration dinner later this evening.";
+//picWidths[2][4] = 900;
+//picHeights[2][4] = 675;
 picLinks[2][5] = "../SkiWeb/2020/feb9//011.feb9.JPG";
 picCaptions[2][5] = "On the west side of the peak, I get a nice glimpse of Mt Hood to the north.";
+//picWidths[2][5] = 900;
+//picHeights[2][5] = 675;
 picLinks[2][6] = "../SkiWeb/2020/feb9//012.feb9.JPG";
 picCaptions[2][6] = "";
+//picWidths[2][6] = 900;
+//picHeights[2][6] = 675;
 picLinks[2][7] = "../SkiWeb/2020/feb9//013.feb9.JPG";
 picCaptions[2][7] = "I discovered they built a new equipment building at the tower spot, with cameras.";
+//picWidths[2][7] = 900;
+//picHeights[2][7] = 675;
 picLinks[2][8] = "../SkiWeb/2020/feb9//015.feb9.JPG";
 picCaptions[2][8] = "This spot gives the best view to the southeast.";
+//picWidths[2][8] = 900;
+//picHeights[2][8] = 675;
 picLinks[2][9] = "../SkiWeb/2020/feb9//023.feb9.JPG";
 picCaptions[2][9] = "After a tricky climb to the actual peak, I descended to my lunch spot.";
+//picWidths[2][9] = 900;
+//picHeights[2][9] = 675;
 picLinks[2][10] = "../SkiWeb/2020/feb9//024.feb9.JPG";
 picCaptions[2][10] = "Not a bad view this morning, to the northeast.";
+//picWidths[2][10] = 900;
+//picHeights[2][10] = 675;
 picLinks[2][11] = "../SkiWeb/2020/feb9//025.feb9.JPG";
 picCaptions[2][11] = "And to the southeast.";
+//picWidths[2][11] = 900;
+//picHeights[2][11] = 675;
 picLinks[2][12] = "../SkiWeb/2020/feb9//031.feb9.JPG";
 picCaptions[2][12] = "";
+//picWidths[2][12] = 900;
+//picHeights[2][12] = 675;
 picLinks[2][13] = "../SkiWeb/2020/feb9//032.feb9.JPG";
 picCaptions[2][13] = "So many times I have enjoyed the shadows on Mt Jefferson.";
+//picWidths[2][13] = 900;
+//picHeights[2][13] = 675;
 picLinks[2][14] = "../SkiWeb/2020/feb9//034.feb9.JPG";
 picCaptions[2][14] = "Cone, Echo, South.";
+//picWidths[2][14] = 900;
+//picHeights[2][14] = 675;
 picLinks[2][15] = "../SkiWeb/2020/feb9//040.feb9.JPG";
 picCaptions[2][15] = "The spire of Iron Mountain barely visible in the cloud mist.";
+//picWidths[2][15] = 900;
+//picHeights[2][15] = 675;
 picLinks[2][16] = "../SkiWeb/2020/feb9//041.feb9.JPG";
 picCaptions[2][16] = "Tombstone.";
+//picWidths[2][16] = 900;
+//picHeights[2][16] = 675;
 picLinks[2][17] = "../SkiWeb/2020/feb9//043.feb9.JPG";
 picCaptions[2][17] = "Two of the sisters.";
+//picWidths[2][17] = 900;
+//picHeights[2][17] = 675;
 picLinks[2][18] = "../SkiWeb/2020/feb9//044.feb9.JPG";
 picCaptions[2][18] = "";
+//picWidths[2][18] = 900;
+//picHeights[2][18] = 675;
 picLinks[2][19] = "../SkiWeb/2020/feb9//055.feb9.JPG";
 picCaptions[2][19] = "The glide back down on my tracks was delightful.";
+//picWidths[2][19] = 900;
+//picHeights[2][19] = 675;
 picLinks[2][20] = "../SkiWeb/2020/feb9//002.feb9.sony.JPG";
 picCaptions[2][20] = "I decided to take the long route home to take in the varied scenery.";
+//picWidths[2][20] = 900;
+//picHeights[2][20] = 675;
 picLinks[2][21] = "../SkiWeb/2020/feb9//058.feb9.JPG";
 picCaptions[2][21] = "It stayed wonderfully shady and cold on the north route.";
+//picWidths[2][21] = 900;
+//picHeights[2][21] = 675;
 picLinks[2][22] = "../SkiWeb/2020/feb9//073.feb9.JPG";
 picCaptions[2][22] = "There were a handful of washouts and downed trees along the way, like this.";
+//picWidths[2][22] = 900;
+//picHeights[2][22] = 675;
 picLinks[2][23] = "../SkiWeb/2020/feb9//078.feb9.JPG";
 picCaptions[2][23] = "The last little climb before the long tour back to the car, before the snow got sticky.";
+//picWidths[2][23] = 900;
+//picHeights[2][23] = 675;
+
+
+
+
 picLinks[3] = [];
 picCaptions[3] = [];
+//picWidths[3] = [];
+//picHeights[3] = [];
+
 picLinks[3][0] = "../SkiWeb/2020/feb18//002.feb18.JPG";
 picCaptions[3][0] = "After about an hour breaking trail, I am at the first view spot.";
+//picWidths[3][0] = 900;
+//picHeights[3][0] = 675;
 picLinks[3][1] = "../SkiWeb/2020/feb18//004.feb18.JPG";
 picCaptions[3][1] = "It is very cold this morning, with a crisp view of my home mountains.";
+//picWidths[3][1] = 900;
+//picHeights[3][1] = 675;
 picLinks[3][2] = "../SkiWeb/2020/feb18//007.feb18.JPG";
 picCaptions[3][2] = "The best view of Cone peak today.";
+//picWidths[3][2] = 900;
+//picHeights[3][2] = 675;
 picLinks[3][3] = "../SkiWeb/2020/feb18//015.feb18.JPG";
 picCaptions[3][3] = "After taking a new side road, I am delighted at the new view I am getting.";
+//picWidths[3][3] = 900;
+//picHeights[3][3] = 675;
 picLinks[3][4] = "../SkiWeb/2020/feb18//031.feb18.JPG";
 picCaptions[3][4] = "Super cold and lots of snow in the trees.";
+//picWidths[3][4] = 900;
+//picHeights[3][4] = 675;
 picLinks[3][5] = "../SkiWeb/2020/feb18//034.feb18.JPG";
 picCaptions[3][5] = "I visited that tower nine days ago.";
+//picWidths[3][5] = 900;
+//picHeights[3][5] = 675;
 picLinks[3][6] = "../SkiWeb/2020/feb18//045.feb18.JPG";
 picCaptions[3][6] = "I leveled out a nice flat spot to take in the views with my morning beer.";
+//picWidths[3][6] = 900;
+//picHeights[3][6] = 675;
 picLinks[3][7] = "../SkiWeb/2020/feb18//049.feb18.JPG";
 picCaptions[3][7] = "";
+//picWidths[3][7] = 900;
+//picHeights[3][7] = 675;
 picLinks[3][8] = "../SkiWeb/2020/feb18//057.feb18.JPG";
 picCaptions[3][8] = "";
+//picWidths[3][8] = 900;
+//picHeights[3][8] = 675;
 picLinks[3][9] = "../SkiWeb/2020/feb18//056.feb18.JPG";
 picCaptions[3][9] = "";
+//picWidths[3][9] = 900;
+//picHeights[3][9] = 675;
 picLinks[3][10] = "../SkiWeb/2020/feb18//076.feb18.JPG";
 picCaptions[3][10] = "I had to skirt off trail around this set of downed trees.";
+//picWidths[3][10] = 900;
+//picHeights[3][10] = 675;
 picLinks[3][11] = "../SkiWeb/2020/feb18//083.feb18.JPG";
 picCaptions[3][11] = "On the return, a clearer view of the sisters.";
+//picWidths[3][11] = 900;
+//picHeights[3][11] = 675;
 picLinks[3][12] = "../SkiWeb/2020/feb18//085.feb18.JPG";
 picCaptions[3][12] = "";
+//picWidths[3][12] = 900;
+//picHeights[3][12] = 675;
 picLinks[3][13] = "../SkiWeb/2020/feb18//086.feb18.JPG";
 picCaptions[3][13] = "";
+//picWidths[3][13] = 900;
+//picHeights[3][13] = 675;
 picLinks[3][14] = "../SkiWeb/2020/feb18//087.feb18.JPG";
 picCaptions[3][14] = "";
+//picWidths[3][14] = 900;
+//picHeights[3][14] = 675;
 picLinks[3][15] = "../SkiWeb/2020/feb18//089.feb18.JPG";
 picCaptions[3][15] = "";
+//picWidths[3][15] = 900;
+//picHeights[3][15] = 675;
+
+
+
+
+picLinks[4] = [];
+picCaptions[4] = [];
+//picWidths[4] = [];
+//picHeights[4] = [];
+
+picLinks[4][0] = "../SkiWeb/2020/mar1//000.mar1.JPG";
+picCaptions[4][0] = "Started at 11:30, quickly gliding on light snow to the washout section of the road.";
+//picWidths[4][0] = 900;
+//picHeights[4][0] = 675;
+picLinks[4][1] = "../SkiWeb/2020/mar1//004.mar1.JPG";
+picCaptions[4][1] = "Almost at the view spot, only took 70 minutes.";
+//picWidths[4][1] = 900;
+//picHeights[4][1] = 675;
+picLinks[4][2] = "../SkiWeb/2020/mar1//011.mar1.JPG";
+picCaptions[4][2] = "Low clouds today, so no long distance views.";
+//picWidths[4][2] = 900;
+//picHeights[4][2] = 675;
+picLinks[4][3] = "../SkiWeb/2020/mar1//013.mar1.JPG";
+picCaptions[4][3] = "It stayed cold, no dripping in the trees from last nights snow.";
+//picWidths[4][3] = 900;
+//picHeights[4][3] = 675;
+picLinks[4][4] = "../SkiWeb/2020/mar1//014.mar1.JPG";
+picCaptions[4][4] = "The rock outcrop to the north.";
+//picWidths[4][4] = 900;
+//picHeights[4][4] = 675;
+picLinks[4][5] = "../SkiWeb/2020/mar1//015.mar1.JPG";
+picCaptions[4][5] = "Pretty rugged territory up there.";
+//picWidths[4][5] = 900;
+//picHeights[4][5] = 675;
+picLinks[4][6] = "../SkiWeb/2020/mar1//019.mar1.JPG";
+picCaptions[4][6] = "I toured a lower logging road to look back at this rock cliff.";
+//picWidths[4][6] = 900;
+//picHeights[4][6] = 675;
+picLinks[4][7] = "../SkiWeb/2020/mar1//020.mar1.JPG";
+picCaptions[4][7] = "It was a nice climb to the top.";
+//picWidths[4][7] = 900;
+//picHeights[4][7] = 675;
+picLinks[4][8] = "../SkiWeb/2020/mar1//021.mar1.JPG";
+picCaptions[4][8] = "";
+//picWidths[4][8] = 900;
+//picHeights[4][8] = 675;
+
+
 
 function nextTrekDiv(n) {
   showTrekDiv(trekIndex += n);
 }
+function prevTrekLocation(n) {
+	window.location.href = prevTrekLocationLinks[trekIndex];
+}
+function nextTrekLocation(n) {
+	window.location.href = nextTrekLocationLinks[trekIndex];
+}
+function prevTrekCompanion(i) {
+	window.location.href = trekCompanionsPrevLinks[trekIndex][i];
+}
+function nextTrekCompanion(i) {
+	window.location.href = trekCompanionsNextLinks[trekIndex][i];
+}
+function createCompanionDivs(name, index) {
+  var result = [];
+  var newElem = document.createElement ("button");
+  newElem.setAttribute("class", "w3-button w3-padding-small buttonDiv2 trekTopPanelElementLeft");
+  newElem.setAttribute("onclick", "prevTrekCompanion(" + index + ")");
+  newElem.innerHTML = "&#10094;";
+  result[0] = newElem;
 
+  newElem = document.createElement ("div");
+  newElem.setAttribute("class", "descriptionTextLarge trekTopPanelElementLeft trekTopPanelTextElement");
+  newElem.id = "fhjTrekCompanion";
+  newElem.innerHTML = name;
+  result[1] = newElem;
+
+  newElem = document.createElement ("button");
+  newElem.setAttribute("class", "w3-button w3-padding-small buttonDiv2 trekTopPanelElementLeft");
+  newElem.setAttribute("onclick", "nextTrekCompanion(" + index + ")");
+  newElem.innerHTML = "&#10095;";
+  result[2] = newElem;
+
+  return result;
+}
 function showTrekDiv(n) {
   var i;
   var y = document.getElementsByClassName("myTreks");
 
-  if (n >= y.length) {trekIndex = 0}
-  if (n < 0) {trekIndex = y.length-1}
+  if (n >= y.length) {
+    trekIndex = 0;
+  }
+  if (n < 0) {
+    trekIndex = y.length-1;
+  }
+
   for (i = 0; i < y.length; i++) {
      y[i].style.fontWeight = "normal";
      y[i].style.fontSize = "small";
   }
   y[trekIndex].style.fontWeight = "bold";
   y[trekIndex].style.fontSize = "small";
+
 
   slideIndex = 0;
   showSlideDiv(0);
@@ -259,18 +510,39 @@ function showTrekDiv(n) {
 function nextSlideDiv(n) {
   showSlideDiv(slideIndex += n);
 }
-
 function showSlideDiv(n) {
   if (slideIndex < 0) { slideIndex = picLinks[trekIndex].length-1 }
   if (slideIndex > picLinks[trekIndex].length-1) { slideIndex = 0 }
 
-  var img = document.getElementById("jTrekImg");
-  var captionDiv = document.getElementById("jTrekDiv");
+  var picOuterDiv = document.getElementById("fhjPicOuter");
+  if (picLinks[trekIndex].length == 0) {
+    picOuterDiv.style.display = "none";
+  }
+  else {
+    picOuterDiv.style.display = "block";
+//    picOuterDiv.width = picWidths[trekIndex][slideIndex];
+//    picOuterDiv.height = picHeights[trekIndex][slideIndex];
+  }
+  var img = document.getElementById("fhjPicImg");
   img.src = picLinks[trekIndex][slideIndex];
+
+  var captionDiv = document.getElementById("fhjPicCaption");
+  if (picCaptions[trekIndex][slideIndex].length == 0) {
+    captionDiv.style.display = "none";
+  }
+  else {
+    captionDiv.style.display = "block";
+  }
   captionDiv.textContent = picCaptions[trekIndex][slideIndex];
 }
 
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+
 var trekIndex = 0;
+if (urlParams.has('trekIndex')) {
+  trekIndex = parseInt(urlParams.get('trekIndex', 10));
+}
 var slideIndex = 0;
 showTrekDiv(0);
 

@@ -1,0 +1,143 @@
+.outerPanel {
+	width: 1240px;
+	padding-top: 0.7em;
+	padding-bottom: 0.7em;
+	padding-left: 0.7em;
+	padding-right: 0.7em;
+	background-color: #a3a19f;
+	font-size: medium;
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius:8px;
+}
+.oneFourthPanel {
+    width: 25%;
+    margin: 0.25%;
+    display: inline-block;
+    padding-top: 0.25em;
+    vertical-align: top;
+}
+.seasonTrekAlign {
+	display: inline-block;
+	float: left;
+	text-align: left;
+	padding-left: 3em;
+	vertical-align: text-bottom;
+}
+.descriptionTextXLarge {
+	font-weight: bold;
+	font-size: x-large;
+}
+
+.descriptionTextLarge {
+	font-weight: bold;
+	font-size: large;
+}
+.descriptionTextSmall {
+	font-size: small;
+}
+.topbarPadForLeft {
+	display: inline-block;
+	padding-right: 1em;
+	float: left;
+	font-size: large;
+	vertical-align: text-bottom;
+}
+.topbarPadForRight {
+	display: inline-block;
+	padding-left: 1em;
+	float: right;
+	font-size: small;
+	vertical-align: text-bottom;
+}
+.treksListPanel {
+    overflow-y: auto;
+    max-height: 550px;
+}
+.myTreks:hover {
+	color: #FFFFFF;
+}
+.threeFourthsPanel {
+    width: 70%;
+    margin: 0.25%;
+    display: inline-block;
+    padding-top: 0.25em;
+    vertical-align: top;
+}
+.imageContainer {
+    background-color: #333;
+    width: 900px;
+    height: 675px;
+    overflow: hidden;
+    border-radius:8px;
+}
+.trekTopPanel {
+    overflow: hidden;
+    position: relative;
+}
+.trekTopPanelElement {
+    float: left;
+}
+.trekTopPanelTextElement {
+    padding: 5px;
+}
+.trekPic {
+	border-radius:10px;
+}
+.captionDiv {
+    border-radius:7px;
+    opacity: .8;
+}
+.buttonDiv {
+    border-radius:3px;
+    opacity: .3;
+}
+.buttonDiv2 {
+    border-radius:3px;
+    opacity: .3;
+    background-color: #333;
+}
+.fhjTable
+{
+	display: table;
+	border-radius:8px;
+	background-color: #FFFFFF;
+}
+.fhjTableTitle
+{
+        display: table-caption;
+        text-align: center;
+        font-weight: bold;
+        font-size: larger;
+}
+.fhjTableHeading
+{
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+}
+.fhjTableRow
+{
+        display: table-row;
+}
+.fhjTableCellLeft
+{
+        text-align: left;
+        display: table-cell;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 5px;
+        padding-top: 3px;
+	border-style:solid;
+	border-color:#a3a19f;
+}
+.fhjTableCellRight
+{
+        text-align: right;
+        display: table-cell;
+        border-width: thin;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 5px;
+        padding-top: 3px;
+}
+
