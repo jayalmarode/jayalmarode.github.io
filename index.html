@@ -13,11 +13,11 @@
 <body bgcolor="#ffffff" dir="ltr" lang="en-US" link="#000099" text="#000000" vlink="#990099">
 <title>FHJ</title>
 
-<div id="outerPanel">
+<div id="outerPanel" >
 <div class="w3-content w3-display-container">
 
 <div class="outerImageContainer">
-<div class="w3-display-container" id="imageContainer">
+<div class="w3-display-container" id="imageContainer" onclick="openFullscreen();">
   <img src="" style="width:100%" class="trekPic" id="jTrekImg">
   <div class="w3-display-bottomleft w3-small w3-container w3-padding-small w3-light-gray w3-text-blue captionDiv" id="jTrekDiv">
   </div>
@@ -34,7 +34,6 @@
 </div> <!-- outerPanel --!>
 
 <script>
-
 var picLinks = [];
 var picDates = [];
 var picLocations = [];
@@ -373,6 +372,18 @@ var slideIndex = 0;
 var prevSlideIndex = -1;
 showSlides();
 
+function openFullscreen() {
+var elem = document.getElementById("imageContainer");
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
 </script>
 
 </body>
