@@ -9,217 +9,223 @@
 <title>Jay's Home</title>
 
 <style>
-#container
-{
-	margin: 0 auto;
-	width: 100%;
-	height: 100%;
+.grid-container {
+  display: grid;
+  grid-template-columns: 980px;
+  grid-template-rows:  auto;
+  grid-gap: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
-table
-{
-	border:1px solid black;
-	border-spacing:5px;
-	text-align:center;
-	font-weight: bold;
-	font-size: 20px;
-	font-family: Arial, Helvetica, sans-serif;
+.grid-container1 {
+  display: grid;
+  grid-template-columns: 160px 160px 160px 160px 160px 160px;
+  grid-template-rows: 65px 65px 65px 65px auto auto;
+  grid-gap: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.grid-container2 {
+  display: grid;
+  grid-template-columns: 480px 480px;
+  grid-template-rows: auto;
+  grid-gap: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.itemX {
+  grid-column: 1 / span 6;
+}
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+.active, .collapsible:hover {
+  background-color: #555;
+}
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+}
+.active:after {
+  content: "\2212";
+}
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: white;
 }
 #FJSButton, .FJSButton
 {
-	border:2px solid;
-	border-radius:15px;
-	width: 120px;
-	height: 40px;
-	padding: 5px;
-	text-align:center;
-	font-size: 14px;
-	margin: 5px;
-	background-color: #FFFFFF;
+        border:2px solid;
+        border-radius:15px;
+        width: 120px;
+        height: 40px;
+        padding: 5px;
+        text-align:center;
+        font-size: 14px;
+        margin: 5px;
+        background-color: #FFFFFF;
 }
-
 #color1
-{
-	background-color: #5EAE9E;
-}
+{ background-color: #5EAE9E; }
 #color2
-{
-	background-color: #25A0C5;
-}
+{ background-color: #25A0C5; }
 #color3
-{
-	background-color: #5B5BFF;
-}
+{ background-color: #5B5BFF; }
 #color4
-{
-	background-color: #8D18AB;
-}
+{ background-color: #8D18AB; }
 
-</style> 
+</style>
 
-<table >
+<div class="grid-container">
 
-<tbody>
+<button class="collapsible" id="linksButton" >Links</button>
 
-<tr valign="top" id="color1" > <!-- Row 1 ------------------------------------------------------ News -->
+<div class="grid-container1 content" id="linksGrid" >
 
-<td valign="top">
-<a href="https://tyt.com/shows/the-young-turks" title="TYT" style="text-decoration: none"> 
-<div id="FJSButton">
-<img src="./images/tyt.PNG" alt="TYT" title="TYT" /> 
-</div>
+<!-- Row 1 -------------------------------- News -->
+
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color1" >
+<a href="https://tyt.com/shows/the-young-turks" title="TYT" style="text-decoration: none">
+<div id="FJSButton"> <img src="./images/tyt.PNG" alt="TYT" title="TYT" /> </div>
 </a>
-</td>
+</div>
 
-<td valign="top">
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color1" >
 <a href="http://www.washingtonpost.com/" style="text-decoration: none">
-<div id="FJSButton">
-<img src="./images/wapo.PNG" alt="WaPo" title="Washington Post" />
-</div>
+<div id="FJSButton"> <img src="./images/wapo.PNG" alt="WaPo" title="Washington Post" /> </div>
 </a>
-</td>
+</div>
 
-<td valign="top">
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color1" >
 <a href="http://www.koin.com/" style="text-decoration: none">
-<div id="FJSButton">
-<img src="./images/koin.PNG" alt="KOIN" title="KOIN" />
-</div>
+<div id="FJSButton"> <img src="./images/koin.PNG" alt="KOIN" title="KOIN" /> </div>
 </a>
-</td>
+</div>
 
-<td valign="top">
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color1" >
 <a href="http://www.cnn.com/" style="text-decoration: none">
-<div id="FJSButton">
-<img src="./images/cnn.PNG" alt="CNN" title="CNN" />
-</div>
+<div id="FJSButton"> <img src="./images/cnn.PNG" alt="CNN" title="CNN" /> </div>
 </a>
-</td>
+</div>
 
-<td valign="top">
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color1" >
 <a href="http://www.guardiannews.com/" style="text-decoration: none">
-<div id="FJSButton">
-<img src="./images/guard.PNG" alt="The Guardian" title="The Guardian" />
-</div>
+<div id="FJSButton"> <img src="./images/guard.PNG" alt="The Guardian" title="The Guardian" /> </div>
 </a>
-</td>
+</div>
 
-<td valign="top">
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color1" >
 <a href="http://pbd.blogspot.com/" style="text-decoration: none">
-<div id="FJSButton">
-<img src="./images/pbd.PNG" alt="PBD" title="Progressive Blog Digest" />
-</div>
+<div id="FJSButton"> <img src="./images/pbd.PNG" alt="PBD" title="Progressive Blog Digest" /> </div>
 </a>
-</td>
+</div>
 
+<!-- Row 2 -------------------------------- Weather/Ski -->
 
-</tr>
-
-
-<tr valign="top" id="color2" > <!-- Row 2 ------------------------------------------------------ Weather/Ski -->
-
-<td valign="top">
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color2" >
 <a href="http://forecast.weather.gov/MapClick.php?lat=44.49650533109348&lon=-122.91641235351562&site=pqr&smap=1&marine=0&unit=0&lg=en" style="text-decoration: none">
-<div id="FJSButton">
-<img src="./images/noaa.PNG" alt="NOAA" title="NOAA" />
-Weather
-</div>
+<div id="FJSButton"> <img src="./images/noaa.PNG" alt="NOAA" title="weather Lebanon" /> Lebanon </div>
 </a>
-</td>
+</div>
 
-<td valign="top">
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color2" >
+<a href="https://forecast.weather.gov/MapClick.php?lon=-124.10061836242676&lat=44.31786144287318#.X8JiUF57muU" style="text-decoration: none">
+<div id="FJSButton"> <img src="./images/noaa.PNG" alt="NOAA" title="weather Yachats" /> Yachats </div>
+</a>
+</div>
+
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color2" >
 <a href="https://jayalmarode.github.io/" style="text-decoration: none">
-<div id="FJSButton">
-<img src="./images/fhj.JPG" alt="FHJ" title="FHJ" />
-FHJ
-</div>
+<div id="FJSButton"> <img src="./images/fhj.JPG" alt="FHJ" title="FHJ" /> FHJ </div>
 </a>
-
-</td>
-
-<td valign="top">
-<a href="https://turns-all-year.com/trip-reports" style="text-decoration: none">
-<div id="FJSButton">
-<img src="./images/tay.PNG" alt="TAY" title="TAY" />
-TAY
 </div>
-</a>
-</td>
 
-<td valign="top">
-<a href="http://www.nwhikers.net/forums/viewforum.php?f=3" style="text-decoration: none">
-<div id="FJSButton">
-<img src="./images/hike.PNG" alt="NWHikers" title="NWHikers" />
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" >
 </div>
-</a>
-</td>
 
-<td style="background-color: #ffffff;" ></td>
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color1" >
+<a href="https://yachatsnews.com/" style="text-decoration: none">
+<div id="FJSButton"> <img src="./images/yachats.PNG" alt="Yachats News" title="Yachats News" /> </div> </a>
+</div>
 
-<td valign="top" id="color1" >
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color1" >
 <a href="http://www.gazettetimes.com/" style="text-decoration: none">
-<div id="FJSButton">
-<img src="./images/cor.gaz.PNG" alt="Corvallis Gazette" title="Corvallis Gazette" />
+<div id="FJSButton"> <img src="./images/cor.gaz.PNG" alt="Corvallis Gazette" title="Corvallis Gazette" /> </div> </a>
 </div>
+
+<!-- Row 3 -------------------------------- Entertainment -->
+
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color3" >
+<a href="https://turns-all-year.com/trip-reports" style="text-decoration: none">
+<div id="FJSButton"> <img src="./images/tay.PNG" alt="TAY" title="TAY" /> TAY </div>
 </a>
-</td>
-
-
-</tr>
-
-
-<tr valign="top" id="color3" > <!-- Row 3 ------------------------------------------------------ Entertainment -->
-
-
-<td valign="top">
-<a href="https://mail.google.com" style="text-decoration: none">
-<div id="FJSButton">
-<img src="./images/google.PNG" alt="Google mail" title="Google mail" />
 </div>
-</a>
-</td>
 
-<td valign="top">
-<font size="3" face="Helvetica, Arial, sans-serif">
-<a href="http://mail.yahoo.com/?.intl=us&.lang=en-US" style="text-decoration: none">
-<div id="FJSButton">
-<img src="./images/yhoo.PNG" alt="YYahoo Mail" title="Yahoo Mail" />
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color3" >
+<a href="http://www.nwhikers.net/forums/viewforum.php?f=3" style="text-decoration: none">
+<div id="FJSButton"> <img src="./images/hike.PNG" alt="NWHikers" title="NWHikers" /> </div> </a>
 </div>
-</a>
-</td>
 
-<td style="background-color: #ffffff;" ></td>
-<td style="background-color: #ffffff;" ></td>
-
-<td valign="top">
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color3" >
 <a href="http://www.pandora.com/#/" style="text-decoration: none">
-<div id="FJSButton">
-<img src="./images/pand.PNG" alt="Pandora" title="Pandora" />
+<div id="FJSButton"> <img src="./images/pand.PNG" alt="Pandora" title="Pandora" /> </div> </a>
 </div>
-</a>
-</td>
 
-<td valign="top">
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color3" >
 <a href="http://www.youtube.com" style="text-decoration: none">
-<div id="FJSButton">
-<img src="./images/ytube.PNG" alt="YouTube" title="YouTube" />
+<div id="FJSButton"> <img src="./images/ytube.PNG" alt="YouTube" title="YouTube" /> </div> </a>
 </div>
-</a>
-</td>
 
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color4" >
+<a href="https://mail.google.com" style="text-decoration: none">
+<div id="FJSButton"> <img src="./images/google.PNG" alt="Google Mail" title="Google Mail" /> </div> </a>
+</div>
 
-</tr>
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" id="color4" >
+<a href="http://mail.yahoo.com/?.intl=us&.lang=en-US" style="text-decoration: none">
+<div id="FJSButton"> <img src="./images/yhoo.PNG" alt="YYahoo Mail" title="Yahoo Mail" /> </div> </a>
+</div>
 
-<tr> <!-- Row 5 ------------------------------------------------------ Images -->
+</div> <!-- linksGrid -->
 
+<!-- Row 5 -------------------------------- Mountain / Coast Images -->
 
-<td colspan="3" >
-<a href="http://www.tripcheck.com/Pages/RCMap.asp?mainNav=RoadConditions&curRegion=4" style="text-decoration: none" title="ODOT TripCheck" >
-<img width="492" height="468" src="http://www.tripcheck.com/RoadCams/cams/US20atTombstone_pid1354.jpg" >
-</a>
-</td>
+<button class="collapsible" id="mountainCoastButton" >Mountain / Coast Webcams</button>
 
+<div class="grid-container2 content" id="mountainCoastGrid" >
 
-
-<td colspan="4" valign="top" >
+<!-- Col - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<div class="grid-item" valign="top" halign="left" >
 <a href="http://www.santiampassskipatrol.org/wx/weather1e.jpg" style="text-decoration: none" title="View of 3FJ from top of HooDoo" >
 <img width="480" height="272" src="http://www.santiampassskipatrol.org/wx/weather1e.jpg" >
 </a>
@@ -229,7 +235,6 @@ TAY
 <img src="./images/hoodoo.PNG" alt="HooDoo" title="Santiam Pass ski patrol web cams" />
 HooDoo
 </a>
-
 
 <a href="https://wcc.sc.egov.usda.gov/reportGenerator/view/customSingleStationReport/hourly/552:random:SNTL/-167,0/WTEQ::value,SNWD::value,PREC::value,TOBS::value" style="text-decoration: none">
 <img src="./images/nrcs.PNG" alt="Iron Mtn" title="Snotel for Jump Off Joe" />
@@ -246,20 +251,134 @@ Iron Mtn
 3FJ
 </a>
 
-</td>
+</div>
+
+<div class="grid-item" valign="top" halign="right" >
+<a href="https://www.newportoregon.gov/img/webcam/newport3.jpg" style="text-decoration: none" title="Yaquina Bridge" >
+<img width="480" height="320" src="https://www.newportoregon.gov/img/webcam/newport3.jpg" >
+</a>
+
+</div>
+
+</div> <!-- content inside -->
+
+<!-- Row 6 -------------------------------- ODOT -->
+
+<button class="collapsible" id="odotButton" >ODOT Webcams</button>
+
+<div class="grid-container2 content" id="odotGrid" >
+
+<div class="grid-item" valign="top" halign="left" >
+<a href="http://www.tripcheck.com/Pages/RCMap.asp?mainNav=RoadConditions&curRegion=4" style="text-decoration: none" title="ODOT TripCheck" >
+<img width="492" height="468" src="http://www.tripcheck.com/RoadCams/cams/US20atTombstone_pid1354.jpg" >
+</a>
+</div>
+
+<div class="grid-item" valign="top" halign="right" >
+<a href="http://www.tripcheck.com/Pages/RCMap.asp?mainNav=RoadConditions&curRegion=4" style="text-decoration: none" title="ODOT TripCheck" >
+<img width="492" height="468" src="https://tripcheck.com/RoadCams/cams/Yaquina%20Bay%20Jetty_pid2766.JPG" >
+</a>
+</div>
 
 
+</div> <!-- content inside -->
 
+</div> <!-- expandable/collapsible grid row -->
 
+</div>
 
-</tr>
+<script>
+var showLinks = getCookie("showLinks");
+if (showLinks.length == 0) {
+  showLinks = "1";
+  setCookie("showLinks", showLinks);
+}
 
+var showMountainCoast = getCookie("showMountainCoast");
+if (showMountainCoast.length == 0) {
+  showMountainCoast = "1";
+  setCookie("showMountainCoast", showMountainCoast);
+}
 
+var showODOTCams = getCookie("showODOTCams");
+if (showODOTCams.length == 0) {
+  showODOTCams = "1";
+  setCookie("showODOTCams", showODOTCams);
+}
 
+var linksButton = document.getElementById("linksButton");
+var linksGrid = document.getElementById("linksGrid");
+if (showLinks == "1")
+  linksGrid.style.maxHeight = linksGrid.scrollHeight + "px";
+else
+  linksGrid.style.maxHeight = null;
+linksButton.addEventListener("click", function() {
+    if (linksGrid.style.maxHeight){
+      linksButton.classList.remove("active");
+      linksGrid.style.maxHeight = null;
+      setCookie("showLinks", "0");
+    } else {
+      linksButton.classList.add("active");
+      linksGrid.style.maxHeight = linksGrid.scrollHeight + "px";
+      setCookie("showLinks", "1");
+    }
+  });
 
+var mountainCoastButton = document.getElementById("mountainCoastButton");
+var mountainCoastGrid = document.getElementById("mountainCoastGrid");
+if (showMountainCoast == "1")
+  mountainCoastGrid.style.maxHeight = mountainCoastGrid.scrollHeight + "px";
+else
+  mountainCoastGrid.style.maxHeight = null;
+mountainCoastButton.addEventListener("click", function() {
+    if (mountainCoastGrid.style.maxHeight){
+      mountainCoastButton.classList.remove("active");
+      mountainCoastGrid.style.maxHeight = null;
+      setCookie("showMountainCoast", "0");
+    } else {
+      mountainCoastButton.classList.add("active");
+      mountainCoastGrid.style.maxHeight = mountainCoastGrid.scrollHeight + "px";
+      setCookie("showMountainCoast", "1");
+    }
+  });
 
+var odotButton = document.getElementById("odotButton");
+var odotGrid = document.getElementById("odotGrid");
+if (showODOTCams == "1")
+  odotGrid.style.maxHeight = odotGrid.scrollHeight + "px";
+else
+  odotGrid.style.maxHeight = null;
+odotButton.addEventListener("click", function() {
+    if (odotGrid.style.maxHeight){
+      odotButton.classList.remove("active");
+      odotGrid.style.maxHeight = null;
+      setCookie("showODOTCams", "0");
+    } else {
+      odotButton.classList.add("active");
+      odotGrid.style.maxHeight = odotGrid.scrollHeight + "px";
+      setCookie("showODOTCams", "1");
+    }
+  });
 
-</tbody>
-</table>
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function setCookie(cname, cvalue) {
+  document.cookie = cname + "=" + cvalue + ";path=/";
+}
+</script>
 </body>
 </html>
+
